@@ -61,7 +61,7 @@ Install requirements
 ```bash
 sudo apt-get update \
 && sudo apt-get install python3-venv git -y \
-&& git clone https://github.com/c29r3/solana-snapshot-finder.git \
+&& git clone https://github.com/DexHeim/solana-snapshot-finder.git \
 && cd solana-snapshot-finder \
 && python3 -m venv venv \
 && source ./venv/bin/activate \
@@ -83,7 +83,7 @@ python3 snapshot-finder.py --snapshot_path $HOME/solana/validator-ledger -r http
 ### Run via docker  
 Mainnet  
 ```bash
-sudo docker pull c29r3/solana-snapshot-finder:latest; \
+sudo docker pull dexheim/solana-snapshot-finder:latest; \
 sudo docker run -it --rm \
 -v ~/solana/validator-ledger:/solana/snapshot \
 --user $(id -u):$(id -g) \
@@ -94,7 +94,7 @@ c29r3/solana-snapshot-finder:latest \
 
 TdS  
 ```bash
-sudo docker pull c29r3/solana-snapshot-finder:latest; \
+sudo docker pull dexheim/solana-snapshot-finder:latest; \
 sudo docker run -it --rm \
 -v ~/solana/validator-ledger:/solana/snapshot \
 --user $(id -u):$(id -g) \
@@ -104,4 +104,4 @@ c29r3/solana-snapshot-finder:latest \
 ```
 
 ## Update  
-`sudo docker pull c29r3/solana-snapshot-finder:latest`
+`sudo docker pull dexheim/solana-snapshot-finder:latest`
