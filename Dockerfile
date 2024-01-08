@@ -20,7 +20,7 @@ USER user
 COPY --chown=user . .
 
 RUN python3 -m venv venv \
-    && source ./venv/bin/activate \
+    && source venv/bin/activate \
     && pip3 install -r requirements.txt --no-cache
 
 ENTRYPOINT ["/solana/venv/bin/python3", "snapshot-finder.py"]
